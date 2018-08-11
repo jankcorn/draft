@@ -5709,14 +5709,18 @@ Function definitions have the form
 %
 \begin{bnf}
 \nontermdef{function-definition}\br
-    \textbf{\opt{decl-specifier-seq} identifier qual-decl parameters-and-qualifiers function-body}\br
+    \textbf{\opt{decl-specifier-seq} interface-qualifier-seq identifier parameters-and-qualifiers function-body}\br
     \opt{attribute-specifier-seq} \opt{decl-specifier-seq} declarator \opt{virt-specifier-seq} function-body\br
     \opt{attribute-specifier-seq} \opt{decl-specifier-seq} declarator requires-clause function-body
 \end{bnf}
 
 \begin{bnf}
-\nontermdef{qual-decl}\br
-    \textbf{\terminal{.} identifier}
+\nontermdef{\textbf{interface-qualifier}}\br
+    \textbf{identifier \terminal{.}}
+
+\nontermdef{\textbf{interface-qualifier-seq}}\br
+    \textbf{interface-qualifier}\br
+    \textbf{interface-qualifier-seq interface-qualifier}
 \end{bnf}
 
 \begin{bnf}
