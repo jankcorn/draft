@@ -18,7 +18,14 @@ Except as indicated, statements are executed in sequence.
     \opt{attribute-specifier-seq} iteration-statement\br
     \opt{attribute-specifier-seq} jump-statement\br
     declaration-statement\br
-    \opt{attribute-specifier-seq} try-block
+    \opt{attribute-specifier-seq} try-block\br
+    \textbf{rule-statement}\br
+
+\nontermdef{\textbf{rule-statement}}\br
+    \textbf{\terminal{__rule} name \opt{if-guard} compound-statement}\br
+
+\nontermdef{\textbf{if-guard}}\br
+    \textbf{\terminal{if (} condition \terminal{)}}
 
 \nontermdef{init-statement}\br
     expression-statement\br
