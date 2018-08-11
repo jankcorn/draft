@@ -53,9 +53,9 @@ make a \grammarterm{class-name}. An object of a class consists of a
     \terminal{class}\br
     \terminal{struct}\br
     \terminal{union}\br
-    \terminal{\textbf{__interface}}\br
-    \terminal{\textbf{__emodule}}\br
-    \terminal{\textbf{__module}}
+    \terminal{__interface} \atomicc\br
+    \terminal{__emodule} \atomicc\br
+    \terminal{__module} \atomicc
 \end{bnf}
 
 A class declaration where the \grammarterm{class-name}
@@ -444,40 +444,40 @@ ignored. A \grammarterm{typedef-name} shall not be used as the
 
 \begin{bnf}
 \nontermdef{member-declaration}\br
-    \opt{attribute-specifier-seq} \textbf{\opt{pin-type}} \opt{decl-specifier-seq} \opt{member-declarator-list} \terminal{;}\br
+    \opt{attribute-specifier-seq} \opt{pin-type} \opt{decl-specifier-seq} \opt{member-declarator-list} \terminal{;} \atomicc\br
     function-definition\br
     using-declaration\br
     static_assert-declaration\br
     template-declaration\br
     deduction-guide\br
     alias-declaration\br
-    \textbf{connect-declaration}\br
-    \textbf{forward-declaration}\br
-    \textbf{printf-declaration}\br
+    connect-declaration \atomicc\br
+    forward-declaration \atomicc\br
+    printf-declaration \atomicc\br
     empty-declaration
 \end{bnf}
 
 \begin{bnf}
-\nontermdef{\textbf{pin-type}}\br
-    \textbf{__input}\br
-    \textbf{__output}\br
-    \textbf{__inout}\br
-    \textbf{__parameter}
+\nontermdef{pin-type} \atomicc\br
+    \terminal{__input} \atomicc\br
+    \terminal{__output} \atomicc\br
+    \terminal{__inout} \atomicc\br
+    \terminal{__parameter} \atomicc
 \end{bnf}
 
 \begin{bnf}
-\nontermdef{\textbf{connect-declaration}}\br
-    \textbf{\terminal{__connect} identifier \terminal{=} identifier \terminal{;}}
+\nontermdef{connect-declaration} \atomicc\br
+    \terminal{__connect} identifier \terminal{=} identifier \terminal{;} \atomicc
 \end{bnf}
 
 \begin{bnf}
-\nontermdef{\textbf{forward-declaration}}\br
-    \textbf{\terminal{__forward} identifier \terminal{=} identifier \terminal{;}}
+\nontermdef{forward-declaration} \atomicc\br
+    \terminal{__forward} identifier \terminal{=} identifier \terminal{;} \atomicc
 \end{bnf}
 
 \begin{bnf}
-\nontermdef{\textbf{printf-declaration}}\br
-    \textbf{__printf \terminal{;}}
+\nontermdef{printf-declaration} \atomicc\br
+    \terminal{__printf ;} \atomicc
 \end{bnf}
 
 \begin{bnf}

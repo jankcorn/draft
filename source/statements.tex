@@ -19,13 +19,13 @@ Except as indicated, statements are executed in sequence.
     \opt{attribute-specifier-seq} jump-statement\br
     declaration-statement\br
     \opt{attribute-specifier-seq} try-block\br
-    \textbf{rule-statement}\br
+    rule-statement \atomicc\br
 
-\nontermdef{\textbf{rule-statement}}\br
-    \textbf{\terminal{__rule} name \opt{if-guard} compound-statement}\br
+\nontermdef{rule-statement} \atomicc\br
+    \terminal{__rule} name \opt{if-guard} compound-statement \atomicc\br
 
-\nontermdef{\textbf{if-guard}}\br
-    \textbf{\terminal{if (} condition \terminal{)}}
+\nontermdef{if-guard} \atomicc\br
+    \terminal{if (} condition \terminal{)} \atomicc
 
 \nontermdef{init-statement}\br
     expression-statement\br
