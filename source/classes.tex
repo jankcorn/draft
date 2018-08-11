@@ -451,9 +451,9 @@ ignored. A \grammarterm{typedef-name} shall not be used as the
     template-declaration\br
     deduction-guide\br
     alias-declaration\br
-    connect-declaration \atomicc\br
-    forward-declaration \atomicc\br
-    printf-declaration \atomicc\br
+    \terminal{__connect} identifier \terminal{=} identifier \terminal{;} \atomicc \br
+    \terminal{__forward} identifier \terminal{=} identifier \terminal{;} \atomicc \br
+    \terminal{__printf ;} \atomicc \br
     empty-declaration
 \end{bnf}
 
@@ -463,21 +463,6 @@ ignored. A \grammarterm{typedef-name} shall not be used as the
     \terminal{__output} \atomicc\br
     \terminal{__inout} \atomicc\br
     \terminal{__parameter} \atomicc
-\end{bnf}
-
-\begin{bnf}
-\nontermdef{connect-declaration} \atomicc\br
-    \terminal{__connect} identifier \terminal{=} identifier \terminal{;} \atomicc
-\end{bnf}
-
-\begin{bnf}
-\nontermdef{forward-declaration} \atomicc\br
-    \terminal{__forward} identifier \terminal{=} identifier \terminal{;} \atomicc
-\end{bnf}
-
-\begin{bnf}
-\nontermdef{printf-declaration} \atomicc\br
-    \terminal{__printf ;} \atomicc
 \end{bnf}
 
 \begin{bnf}
