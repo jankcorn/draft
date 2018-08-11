@@ -1243,6 +1243,8 @@ they are in C.
 \pnum
 The simple type specifiers are
 
+
+%%%\newcommand{\atomicc}{\marginpar{\scriptsize \raggedright {\vspace{-1em} \textbf{ $\blacksquare \blacksquare$ }} } }
 \begin{bnf}
 \nontermdef{simple-type-specifier}\br
     \opt{nested-name-specifier} type-name\br
@@ -1262,9 +1264,9 @@ The simple type specifiers are
     \terminal{double}\br
     \terminal{void}\br
     \terminal{auto}\br
-    \terminal{\textbf{__uint \terminal{(} constant-expression \terminal{)} }}\br
-    \terminal{\textbf{__int \terminal{(} constant-expression \terminal{)} }}\br
-    decltype-specifier
+    decltype-specifier\br
+    \terminal{__uint} \terminal{(} constant-expression \terminal{)} \atomicc \br
+    \terminal{__int} \terminal{(} constant-expression \terminal{)} \atomicc
 \end{bnf}
 
 \begin{bnf}
@@ -5709,23 +5711,23 @@ Function definitions have the form
 %
 \begin{bnf}
 \nontermdef{function-definition}\br
-    \textbf{\opt{decl-specifier-seq} interface-qualifier-seq identifier parameters-and-qualifiers function-body}\br
+    \opt{decl-specifier-seq} interface-qualifier-seq identifier parameters-and-qualifiers function-body \atomicc\br
     \opt{attribute-specifier-seq} \opt{decl-specifier-seq} declarator \opt{virt-specifier-seq} function-body\br
     \opt{attribute-specifier-seq} \opt{decl-specifier-seq} declarator requires-clause function-body
 \end{bnf}
 
 \begin{bnf}
-\nontermdef{\textbf{interface-qualifier}}\br
-    \textbf{identifier \terminal{.}}
+\nontermdef{interface-qualifier} \atomicc\br
+    identifier \terminal{.} \atomicc
 
-\nontermdef{\textbf{interface-qualifier-seq}}\br
-    \textbf{interface-qualifier}\br
-    \textbf{interface-qualifier-seq interface-qualifier}
+\nontermdef{interface-qualifier-seq} \atomicc\br
+    interface-qualifier \atomicc\br
+    interface-qualifier-seq interface-qualifier \atomicc
 \end{bnf}
 
 \begin{bnf}
 \nontermdef{function-body}\br
-    \opt{ctor-initializer} \textbf{\opt{if-guard}} compound-statement\br
+    \opt{ctor-initializer} \opt{if-guard} compound-statement \atomicc\br
     function-try-block\br
     \terminal{= default ;}\br
     \terminal{= delete ;}

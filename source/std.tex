@@ -44,13 +44,8 @@
            ]{hyperref}
 \usepackage{memhfixc}     % fix interactions between hyperref and memoir
 \usepackage[active,header=false,handles=false,copydocumentclass=false,generate=std-gram.ext,extract-cmdline={gramSec},extract-env={bnf,simplebnf}]{extract} % Grammar extraction
-\usepackage{xcolor}
-\usepackage{mdframed}       % atomicc: used for shaded blocks
-\usepackage{changebar}
-\usepackage{soul}
-\usepackage{color}
-\definecolor{lightgray}{rgb}{.92,.92,.92}
-\sethlcolor{lightgray}
+\usepackage{amssymb}
+\newcommand{\atomicc}{\marginpar{\scriptsize \raggedright {\vspace{-1em} \textbf{ $\blacksquare \blacksquare$ }} } }
 
 \pdfminorversion=5
 \pdfcompresslevel=9
