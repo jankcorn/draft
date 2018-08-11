@@ -44,6 +44,13 @@
            ]{hyperref}
 \usepackage{memhfixc}     % fix interactions between hyperref and memoir
 \usepackage[active,header=false,handles=false,copydocumentclass=false,generate=std-gram.ext,extract-cmdline={gramSec},extract-env={bnf,simplebnf}]{extract} % Grammar extraction
+\usepackage{xcolor}
+\usepackage{mdframed}       % atomicc: used for shaded blocks
+\usepackage{changebar}
+\usepackage{soul}
+\usepackage{color}
+\definecolor{lightgray}{rgb}{.92,.92,.92}
+\sethlcolor{lightgray}
 
 \pdfminorversion=5
 \pdfcompresslevel=9
@@ -91,7 +98,7 @@
 %%--------------------------------------------------
 %% front matter
 \frontmatter
-\include{front}
+%%% \include{front}
 
 %%--------------------------------------------------
 %% main body of the document
@@ -109,35 +116,35 @@
 \include{templates}
 \include{exceptions}
 \include{preprocessor}
-\include{lib-intro}
-\include{support}
-\include{concepts}
-\include{diagnostics}
-\include{utilities}
-\include{strings}
-\include{containers}
-\include{iterators}
-\include{algorithms}
+%%% \include{lib-intro}
+%%% \include{support}
+%%% \include{concepts}
+%%% \include{diagnostics}
+%%% \include{utilities}
+%%% \include{strings}
+%%% \include{containers}
+%%% \include{iterators}
+%%% \include{algorithms}
 \include{numerics}
-\include{time}
-\include{locales}
+%%% \include{time}
+%%% \include{locales}
 \include{iostreams}
-\include{regex}
-\include{atomics}
-\include{threads}
+%%% \include{regex}
+%%% \include{atomics}
+%%% \include{threads}
 
 %%--------------------------------------------------
 %% appendices
 \appendix
 \include{grammar}
-\include{limits}
-\include{compatibility}
-\include{future}
+%%% \include{limits}
+%%% \include{compatibility}
+%%% \include{future}
 
 %%--------------------------------------------------
 %% back matter
 \backmatter
-\include{back}
+%%% \include{back}
 
 
 %%--------------------------------------------------
